@@ -2,6 +2,14 @@ class HtmlService {
   String name;
   HtmlService(this.name);
   
+  String mapHTML(html) {
+    List<String> coded = ["[name]", "2", "3"]; //ABV list
+    List<String> decoded = ["Gmail", "Hotmail", "Yahoo"]; //corresponding list 
+    Map<String, String> map = new Map.fromIterables(coded, decoded);
+
+    return map.entries.fold(html, (prev, e) => prev.replaceAll(e.key, e.value));
+  }
+  
   String returnFirstPage() {
    return """
     <html>
