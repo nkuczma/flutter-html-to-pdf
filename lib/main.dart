@@ -42,13 +42,14 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> generateExampleDocument() async {
-    var htmlService = HtmlService('Natalia Kuczma');
+    var htmlService = HtmlService();
+    final mappedHTML = htmlService.mapHTML(html);
     Directory appDocDir = await getApplicationDocumentsDirectory();
     var targetPath = appDocDir.path;
     var targetFileName = "example";
     printColor(targetPath);
     var generatedPdfFile = await FlutterHtmlToPdf.convertFromHtmlContent(
-        html, targetPath, targetFileName);
+        mappedHTML, targetPath, targetFileName);
     printColor("plik wygenerowany");
     printColor(generatedPdfFile);
     try {

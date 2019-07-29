@@ -9,9 +9,9 @@ class MailService {
     // String password = 'password';
 
     final SmtpServer smtpServer = SmtpServer(
-      "add",
-      username: "your",
-      password: "credentials",
+      "smtp.sendgrid.net",
+      username: "azure_d7e73743ef19d3fbf59c55451f8ffc34@azure.com",
+      password: "Mailowanie123!",
     );
     //smtpServer.
     // Create our message.
