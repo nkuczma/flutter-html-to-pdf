@@ -154,6 +154,45 @@
           font-size: 9px;
           font-style: italic;
         }
+        .making-points-info {
+          margin: 50px 0px;
+        }
+        .making-points-table {
+          width: 80%;
+          font-size: 15px;
+          margin-bottom: 50px;
+        }
+        .making-points-table thead th {
+          padding: 10px;
+        }
+        .holiday-cell p:first-child{
+          text-decoration: underline;
+        }
+        .holiday-cell p:last-child{
+          font-style: italic;
+          font-size: 12px;
+        }
+        .making-points-total {
+          font-size: 16px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+
+        }
+        .making-points-total span {
+          padding: 0px 40px;
+        }
+        .making-points-signature {
+          display: flex;
+          margin: 180px 0px;
+        }
+        .making-points-signature > div:first-child {
+          width: 300px;
+          margin-right: 100px;
+        }
+        .making-points-signature > div:nth-child(2) {
+          width: 150px;
+        }
       </style>
     </head>
     <body>
@@ -515,7 +554,7 @@
 
       <div class="page">
         <h2>Making Points</h2>
-        <div class="container">
+        <div class="container making-points-info">
           <div class="row">
             <div>
               <p>Imię i nazwisko pracownika</p>
@@ -529,37 +568,37 @@
               <p>Czas wyjazdu (daty: od…do…)</p>
               <p>Travel dates (from..to…)</p>
             </div>
-            <div>11.02.2019 13.02.2019</div>
+            <div>11.02.2019 - 13.02.2019</div>
           </div>
         </div>
 
         <table class="making-points-table">
+          <thead>
+            <th></th>
+            <th class="align-center">Ilość/ Amount</th>
+            <th class="align-center">PLN</th>
+            <th class="align-center">Total</th>
+          </thead>
           <tr>
-            <td></td>
-            <td>Ilość/ Amount</td>
-            <td>PLN</td>
-            <td>Total</td>
-          </tr>
-          <tr>
-            <td>
+            <td class="align-left holiday-cell">
               <p>Podróż w dni wolne od pracy</p>
               <p>Holiday/weekend flight</p>
             </td>
-            <td>-</td>
-            <td></td>
-            <td>-</td>
+            <td class="background-grey align-center">-</td>
+            <td class="align-center"></td>
+            <td class="align-center">-</td>
           </tr>
         </table>
 
         <div class="making-points-total">
-
-
+          <span>Suma/Total</span>
+          <span>-</span>
         </div>
 
-        <div class="mkaing-point-signature">
+        <div class="making-points-signature">
           <div>
             <div class="signature"></div>
-            <p>Podpis pracownika</p>
+            <p>Podpis pracownika/ Employee signature</p>
           </div>
           <div>
             <div class="signature">03.07.2019</div>
@@ -567,10 +606,13 @@
           </div>
         </div>
 
-        <div class="mkaing-point-signature">
-          <div class="signature"></div>
-          <p>Podpis pracodawcy/ Employer signature</p>
+        <div class="making-points-signature">
+          <div>
+            <div class="signature"></div>
+            <p>Podpis pracodawcy/ Employer signature</p>
+          </div>
         </div>
+
       </div>
     </body>
   </html>
